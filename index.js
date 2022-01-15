@@ -32,7 +32,7 @@ ${description}`
     const encodedFileText = encodeURIComponent(fileText)
   
     //Generate a github link with query parameter
-    //const githubQueryLink2 = "https://github.com/cctreasury/treasury-system/tree/main/Transaction%20recordings/AAT/new?value=" + encodedFileText +"&filename=" + filename
+    //const githubQueryLink2 = "https://github.com/Glaxas/CC-treasury/new/main/Transaction%20recordings/AAT/new?value=" + encodedFileText +"&filename=" + filename
     function githubQueryLink(pool) {
       var answer = "";
       switch(pool) {
@@ -49,7 +49,7 @@ ${description}`
           answer = "https://github.com/cctreasury/treasury-system/tree/main/Transaction%20recordings/Fund7/new?value=" + encodedFileText +"&filename=" + filename;
           break;
         default:
-          answer = "https://github.com/Glaxas/CC-treasury/new/main/Transaction%20recordings/new?value=" + encodedFileText +"&filename=" + filename;
+          answer = "https://github.com/cctreasury/treasury-system/tree/main/Transaction%20recordings/new?value=" + encodedFileText +"&filename=" + filename;
           beark;
       }
     
