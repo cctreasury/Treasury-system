@@ -1,2 +1,5 @@
-# treasury-system
-Central repo for CC Treasury. 
+# Home
+
+Welcome to the CC-treasury.
+
+***

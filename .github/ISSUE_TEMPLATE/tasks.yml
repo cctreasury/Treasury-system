@@ -1,0 +1,71 @@
+name: Tasks or Misc
+description: Ada request
+title: "Ada request for task or miscellaneous"
+labels: ["ADA request", "Tasks/Misc"]
+assignees:
+  - Glaxas
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: Please enter your GitHub Handle.
+      placeholder: ex. @glaxas
+    validations:
+      required: true
+  - type: input
+    id: amount
+    attributes:
+      label: Amount of ADA
+      description: Please enter the amount of ADA.
+      placeholder: ex. 200 ADA
+    validations:
+      required: true
+  - type: textarea
+    id: Task_Misc
+    attributes:
+      label: Task/Misc discription
+      description: Describe the Task/Misc item.
+      placeholder: ex. Creation of guidelines for Funded Proposers
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: CC Role
+      description: Which CC role are you requesting for?
+      options:
+        - CC ADmin Facilitator
+        - CC Admin Secretary
+        - CC Admin Treasurer
+        - CC Advisor
+        - CC Cardano Foundation
+        - CC Community Advisor
+        - CC Curator
+        - CC Funded Proposer
+        - CC General ADA Holder
+        - CC IOG
+        - CC Stakepool Operator
+        - CC Toolmaker and Maintainer
+    validations:
+      required: true
+  - type: textarea
+    id: Comment
+    attributes:
+      label: Extra Comment
+      description: Extra comments about request.
+      placeholder: ex. This is a monthly task, can you please send me this on the 3rd of each month?
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Agree the information is correct
+      description: By submitting this issue, you agree the information provided is correct.
+      options:
+        - label: I agree the information provided is correct.
+          required: true

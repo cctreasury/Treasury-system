@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class='cardstop'>CC Treasury Transaction Form</div>
+    <article>  
+        <div class='mother'> 
+        
+        <form class='testing'>
+            <div class = 'form'>
+                <select class = 'dropd' id = 'pool'>
+                    <option value='Power Up Catalyst Circle' selected>Power Up Catalyst Circle</option>
+                    <option value='CC Admin Team Scope Expansion'>CC Admin Team Scope Expansion</option>
+                    <option value='Sustaining The Circle'>Sustaining The Circle</option>
+                    <option value='Treasury Management System'>Treasury Management System</option>
+                </select>
+            </div>
+            <div class = 'form'>
+                <select class = 'dropd' id = 'name'>
+                    <option value='Allison Fromm' selected>Allison Fromm</option>
+                    <option value='André Diamond'>André Diamond</option>
+                    <option value='Charlie Robertstad'>Charlie Robertstad</option>
+                    <option value='Christopher Keller'>Christopher Keller</option>
+                    <option value='Felix Weber'>Felix Weber</option>
+                    <option value='JP (Jonathan Postnikoff)'>JP (Jonathan Postnikoff)</option>
+                    <option value='Kenric Nelson'>Kenric Nelson</option>
+                    <option value='Mattias Sieber'>Mattias Sieber</option>
+                    <option value='Michael Yagi'>Michael Yagi</option>
+                    <option value='Miroslav Rajh'>Miroslav Rajh</option>
+                    <option value='Nadim Karam'>Nadim Karam</option>
+                    <option value='Nori Nishigaya'>Nori Nishigaya</option>
+                    <option value='Peter Wolcott'>Peter Wolcott</option>
+                    <option value='Raymond Mata'>Raymond Mata</option>
+                    <option value='Stephan Whitenstall'>Stephan Whitenstall</option>
+                    <option value='Tevo Saks'>Tevo Saks</option>
+                    <option value='Victor Corcino'>Victor Corcino</option>
+                    <option value='Warren Harris'>Warren Harris</option>
+                </select>
+            </div>
+            <div class = 'form'>
+                <select class = 'dropd' id = 'role'>
+                    <option value='Advisor CCv1' selected>Advisor CCv1</option>
+                    <option value='Cardano Foundation'>Cardano Foundation</option>
+                    <option value='Community Advisor'>Community Advisor</option>
+                    <option value='Curator CCv1'>Curator CCv1</option>
+                    <option value='Facilitator CCv1'>Facilitator CCv1</option>
+                    <option value='Facilitator CCv2'>Facilitator CCv2</option>
+                    <option value='General ADA Holder'>General ADA Holder</option>
+                    <option value='IOG'>IOG</option>
+                    <option value='Secretary CCv1'>Secretary CCv1</option>
+                    <option value='Stake Pool Operator'>Stake Pool Operator</option>
+                    <option value='Toolmaker and Maintainer'>Toolmaker and Maintainer</option>
+                    <option value='Treasurer CCv2'>Treasurer CCv2</option>
+                    <option value='Funded Proposer'>Funded Proposer</option>
+                </select>
+            </div>
+            <div class='form'>
+                <label class = 'custom-field' for='ada'> 
+                <input
+                    type='text'
+                    id='ada'
+                    name='ada'
+                    autoComplete="off"
+                    required
+                />
+                <span class="placeholder">ADA</span>
+                <span class="disco">Amount</span>
+                </label>
+            </div>
+            <div class='form'>
+                <label class = 'custom-field' for='wallet'>
+                <input
+                    type='text'
+                    id='wallet'
+                    name='wallet'
+                    autoComplete="off"
+                    required
+                />
+                <span class="placeholder">Wallet</span>
+                <span class="disco">Shelly Wallet</span>
+                </label>
+            </div>
+            <div class='form'>
+                <label  for='description'>
+                <textarea class = 'descr'
+                    type='text'
+                    id='description'
+                    name='description'
+                    placeholder="Description"
+                    autoComplete="off"
+                    required
+                ></textarea>
+                <!--<span class="placeholder">Description</span>
+                <span class="disco">Description / Extra comments</span>
+                </label> -->
+            </div>
+            <div class='form'>
+                <button onclick="validateSubmission();" class ='calc'>
+                    Submit
+                </button>
+                <script src="index.js"></script>
+            </div>
+        </form>
+        </div>
+    </article>
+        
+         <!-- We'll prepare our javascript's function for later -->
+        
+</body>
+</html>
