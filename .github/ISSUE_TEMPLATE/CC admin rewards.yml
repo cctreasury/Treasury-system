@@ -1,5 +1,5 @@
 name: CC Admin rewards
-description: Allocate CC Admin rewards
+description: Form to document CC Admin reward shares 
 title: "Ada reward for duties performed"
 labels: ["CC Admin rewards"]
 assignees:
