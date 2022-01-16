@@ -1,20 +1,20 @@
-name: Expenses
-description: Ada request
-title: "Ada request for expense"
-labels: ["ADA request", "Operating Expense"]
+name: CC Treasury Transaction issue form
+description: Issue form to document transaction
+title: "CC Treasury Transaction Issue Form"
+labels: ["Transaction"]
 assignees:
   - Glaxas
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Please fill in the details of the transaction
   - type: input
     id: contact
     attributes:
       label: Contact Details
-      description: Please enter your GitHub Handle.
-      placeholder: ex. @glaxas
+      description: Please enter the name of beneficiary.
+      placeholder: ex. Kenric Nelson
     validations:
       required: true
   - type: input
@@ -25,32 +25,33 @@ body:
       placeholder: ex. 200 ADA or $ amount
     validations:
       required: true
-  - type: textarea
-    id: expense
+  - type: input
+    id: txhash
     attributes:
-      label: Expense discription
-      description: Describe the expense.
-      placeholder: ex. Monthly server hosting fee
+      label: Transaction ID
+      description: Please enter the transaction ID.
+      placeholder: ex. 427b473ca6c643578121745dc2f39f6e7e1681e25bf334d87305aaae73c2216f
     validations:
       required: true
   - type: dropdown
-    id: role
+    id: budgetb
     attributes:
-      label: CC Role
-      description: Which CC role are you requesting for?
+      label: Budget Breakdown Item
+      description: Please select the budget breakdown item.
       options:
-        - CC ADmin Facilitator
-        - CC Admin Secretary
-        - CC Admin Treasurer
-        - CC Advisor
-        - CC Cardano Foundation
-        - CC Community Advisor
-        - CC Curator
-        - CC Funded Proposer
-        - CC General ADA Holder
-        - CC IOG
-        - CC Stakepool Operator
-        - CC Toolmaker and Maintainer
+        - CC member remuneration
+        - CC - Comm/Org tools
+        - CC Admin staff remuneration
+        - CC Admin - Comm/Org tools
+        - CC Treasurer remuneration
+        - CC Treasury system
+        - CC Treasury system documentation
+        - Project funding - Community Advisors
+        - Project funding - Funded Proposers
+        - Project funding - General ADA Holder
+        - Project funding - Stake Pool Operators
+        - Project funding - Toolmakers & Maintainers
+        - Other
     validations:
       required: true
   - type: textarea
