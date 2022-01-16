@@ -8,7 +8,7 @@ function getValue(name){
     const name = getValue('name')
     const role = getValue('role')
     const ada = getValue('ada')
-    const wallet = getValue('wallet')
+    const txid = getValue('txid')
     const description = getValue('description')
     const pool = getValue('pool')
     
@@ -23,7 +23,7 @@ Date: ${new Date().toUTCString()}
 name: "${name}"
 role: "${role}"
 ada: "${ada}"
-wallet: "${wallet}"
+txid: "${txid}"
 pool: "${pool}"
 ---
 ${description}`
