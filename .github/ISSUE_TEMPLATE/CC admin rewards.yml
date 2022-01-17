@@ -1,5 +1,5 @@
 name: CC Admin rewards
-description: Allocate CC Admin rewards
+description: Form to document CC Admin reward shares 
 title: "Ada reward for duties performed"
 labels: ["CC Admin rewards"]
 assignees:
@@ -32,7 +32,7 @@ body:
     attributes:
       label: Extra Comment
       description: Extra comments about reward.
-      placeholder: ex. Only allocate X amount of rewards to be distributed among all members...
+      placeholder: ex. Only allocate X amount of rewards for distribution among all members...
     validations:
       required: false
   - type: checkboxes
