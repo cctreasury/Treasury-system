@@ -45,7 +45,10 @@ Description: ${description}`
         case 'CCv3 Sustaining The Circle':
           answer = "https://github.com/cctreasury/treasury-system/new/main/Transaction%20recordings/Fund7/CCv3-Sustaining-the-circle/new?value=" + encodedFileText +"&filename=" + filename;
           break;
-        case 'CC Treasury Management':
+        case 'CC Funding Mechanism':
+          answer = "https://github.com/cctreasury/treasury-system/new/main/Transaction%20recordings/Fund7/CC-Funding-Mechanism/new?value=" + encodedFileText +"&filename=" + filename;
+          break;
+          case 'CC Treasury Management':
           answer = "https://github.com/cctreasury/treasury-system/new/main/Transaction%20recordings/Fund7/CC-Treasury-Management/new?value=" + encodedFileText +"&filename=" + filename;
           break;
         default:
