@@ -3,6 +3,6 @@ contact_links:
   - name: Transaction Form 2
     url: https://cctreasury.github.io/Treasury-system/
     about: Fill in this form when you make a transaction
-  - name: Tasks/Misc
+  - name: Tasks/Misc/Expenses
     url: https://docs.google.com/forms/d/e/1FAIpQLSf3HQgwo0q05gmsnBZydDMlGnLW0V7reetmQTJR2Tx5gljQfQ/viewform?usp=sf_link
-    about: Google form for tasks/misc ADA requests
+    about: Google form for tasks/misc/expense ADA requests to be completed by Circle member
