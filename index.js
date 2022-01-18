@@ -21,10 +21,10 @@ function getValue(name){
     let fileText = `---
 Date: ${new Date().toUTCString()}
 Name: "${name}"
+Funded Proposal: "${pool}"
 Budget Item: "${budgetB}"
 ADA: "${ada}"
 Transaction ID: "${txid}"
-Funded Proposal: "${pool}"
 ---
 Description: ${description}`
     
@@ -37,28 +37,76 @@ Description: ${description}`
       var answer = "";
       switch(pool) {
         case 'Power Up Catalyst Circle':
-          answer = "https://github.com/cctreasury/treasury-system/new/main/Transaction%20recordings/Fund6/Power-Up-The-Catalyst-Circle/new?value=" + encodedFileText +"&filename=" + filename;
+          answer = "Fund6/Power-Up-The-Catalyst-Circle/";
           break;
         case 'CC Admin Team Scope Expansion':
-          answer = "https://github.com/cctreasury/treasury-system/new/main/Transaction%20recordings/Fund7/CC-Admin-Team-Scope-Expantion/new?value=" + encodedFileText +"&filename=" + filename;
+          answer = "Fund7/CC-Admin-Team-Scope-Expantion/";
           break;
         case 'CCv3 Sustaining The Circle':
-          answer = "https://github.com/cctreasury/treasury-system/new/main/Transaction%20recordings/Fund7/CCv3-Sustaining-the-circle/new?value=" + encodedFileText +"&filename=" + filename;
+          answer = "Fund7/CCv3-Sustaining-the-circle/";
           break;
         case 'CC Funding Mechanism':
-          answer = "https://github.com/cctreasury/treasury-system/new/main/Transaction%20recordings/Fund7/CC-Funding-Mechanism/new?value=" + encodedFileText +"&filename=" + filename;
+          answer = "Fund7/CC-Funding-Mechanism/";
           break;
-          case 'CC Treasury Management':
-          answer = "https://github.com/cctreasury/treasury-system/new/main/Transaction%20recordings/Fund7/CC-Treasury-Management/new?value=" + encodedFileText +"&filename=" + filename;
+        case 'CC Treasury Management':
+          answer = "Fund7/CC-Treasury-Management/";
           break;
         default:
-          answer = "https://github.com/cctreasury/treasury-system/new/main/Transaction%20recordings/new?value=" + encodedFileText +"&filename=" + filename;
+          answer = "";
           break;
       }
-    
+      return answer;
+    }
+
+    function githubQueryLink2(budgetB) {
+      var answer = "";
+      switch(budgetB) {
+        case 'CC member remuneration':
+          answer = "CC-member-remuneration/";
+          break;
+        case 'CC - Comm/Org tools':
+          answer = "CC-Comm-Org-tools/";
+          break;
+        case 'CC Admin staff remuneration':
+          answer = "CC-Admin-staff-remuneration/";
+          break;
+        case 'CC Admin - Comm/Org tools':
+          answer = "CC-Admin-Comm-Org-tools/";
+          break;
+        case 'CC Treasurer remuneration':
+          answer = "CC-Treasurer-remuneration/";
+          break;
+        case 'CC Treasury system':
+          answer = "CC-Treasury-system/";
+          break;
+        case 'CC Treasury system documentation':
+          answer = "CC-Treasury-system-documentation/";
+          break;
+        case 'Project funding - Community Advisors':
+          answer = "Project-funding-Community-Advisors/";
+          break;
+        case 'Project funding - Funded Proposers':
+          answer = "Project-funding-Funded-Proposers/";
+          break;
+        case 'Project funding - General ADA Holder':
+          answer = "Project-funding-General-ADA-Holder/";
+          break;
+        case 'Project funding - Stake Pool Operators':
+          answer = "Project-funding-Stake-Pool-Operators/";
+          break;
+        case 'Project funding - Toolmakers & Maintainers':
+          answer = "Project-funding-Toolmakers-&-Maintainers/";
+          break;
+        case 'Other':
+          answer = "Other/";
+          break;
+        default:
+          answer = "";
+          break;
+      }
       return answer;
     }
     //Open in a new tab
-  window.open(githubQueryLink(pool)) 
+  window.open("https://github.com/cctreasury/treasury-system/new/main/Transaction%20recordings/" + githubQueryLink(pool) + githubQueryLink2(budgetB) + "new?value=" + encodedFileText +"&filename=" + filename);
     
   }
