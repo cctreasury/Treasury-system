@@ -21,7 +21,7 @@ function getValue(name){
     let fileText = `---
 Date: ${new Date().toUTCString()}
 Name: "${name}"
-Budget Breakdown Item: "${budgetB}"
+Budget Item: "${budgetB}"
 ADA: "${ada}"
 Transaction ID: "${txid}"
 Funded Proposal: "${pool}"
