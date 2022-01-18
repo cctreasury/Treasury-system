@@ -12,7 +12,7 @@ body:
   - type: input
     id: contact
     attributes:
-      label: Contact Details
+      label: Name
       description: Please enter the name of beneficiary.
       placeholder: ex. Kenric Nelson
     validations:
@@ -31,6 +31,19 @@ body:
       label: Transaction ID
       description: Please enter the transaction ID.
       placeholder: ex. 427b473ca6c643578121745dc2f39f6e7e1681e25bf334d87305aaae73c2216f
+    validations:
+      required: true
+  - type: dropdown
+    id: pool
+    attributes:
+      label: Pool
+      description: Please select the funded proposal that will pay for this
+      options:
+        - Power Up Catalyst Circle
+        - CC Admin Team Scope Expansion
+        - CCv3 Sustaining the Circle
+        - CC Funding Mechanism
+        - CC Treasury Management
     validations:
       required: true
   - type: dropdown
