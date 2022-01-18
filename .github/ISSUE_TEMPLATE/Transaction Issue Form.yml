@@ -1,5 +1,5 @@
 name: Transaction issue form
-description: Issue form to document transaction
+description: Fill this in when you make transaction
 title: "CC Treasury Transaction Issue Form"
 labels: ["Transactions"]
 assignees:
