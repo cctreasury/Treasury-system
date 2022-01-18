@@ -23,36 +23,25 @@ code {
   --speed: 500ms;
 }
 
-.mother {
+.main {
   display: flex;
 }
 
-.mother > *:nth-child(1) {
+.main > *:nth-child(1) {
   flex: 1 1 30%;
 }
-.mother > *:nth-child(2) {
+.main > *:nth-child(2) {
   flex: 1 1 30%;
   min-width: 50ch;
 }
-.mother > *:nth-child(3) {
+.main > *:nth-child(3) {
   flex: 1 1 30%;
 }
 
 @media only screen and (max-width: 600px) {
-  .mother .cards {
+  .main {
     display: none;
   }
-}
-
-.cards {
-  display:flex;
-  background-color:var(--bg-accent);
-  padding: 5px;
-  margin-top: none;
-  margin-inline: 15px;
-  border-radius: 5px;
-  justify-content: center;
-  align-items: center;
 }
 
 .cardstop {
