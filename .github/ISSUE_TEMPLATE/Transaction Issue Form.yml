@@ -36,8 +36,8 @@ body:
   - type: dropdown
     id: budgetb
     attributes:
-      label: Budget Breakdown Item
-      description: Please select the budget breakdown item.
+      label: Budget Item
+      description: Please select the budget item.
       options:
         - CC member remuneration
         - CC - Comm/Org tools
