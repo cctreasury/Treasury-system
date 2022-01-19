@@ -1,5 +1,5 @@
 ---
-Date: \~\~Tue, 18 Jan 2022 15:01:22 GMT\~\~
+Date: Tue, 18 Jan 2022 15:01:22 GMT
 Name: "JP (Jonathan Postnikoff)"
 Funded Proposal: "Power Up Catalyst Circle"
 Budget Item: "Other"
