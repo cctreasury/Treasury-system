@@ -1,6 +1,6 @@
 ---
 Date: Fri, 14 Jan 2022 21:22:30 GMT
-Name: "Project Catalyst"
+Name: "CC Admin"
 Funded Proposal: "Power Up Catalyst Circle"
 Budget Item: ""
 ADA: "6024.93"
