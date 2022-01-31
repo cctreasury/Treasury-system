@@ -19,7 +19,7 @@ jobs:
                   email-from: ${{ secrets.EMAIL_FROM }}
                   recipient-emails: ${{ secrets.RECIPIENT_EMAILS }}
                   project-numbers: all
-                  days: 7
+                  days: 30
             - name: Upload summary to artifacts
               uses: actions/upload-artifact@v1
               with:
