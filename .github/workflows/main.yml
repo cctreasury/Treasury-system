@@ -2,7 +2,7 @@ name: Issue Month Statistics
 
 on:
   schedule:
-    - cron: "28 * * * *"
+    - cron: '37 * * * *'
 
 jobs:
   month-statistics:
@@ -14,6 +14,7 @@ jobs:
           actions: 'month-statistics'
           token: ${{ secrets.GITHUB_TOKEN }}
           count-lables: 'true'
+          count-comments: 'true'
           
         
           
