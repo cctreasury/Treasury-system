@@ -2,7 +2,7 @@ name: Issue Month Statistics
 
 on:
   schedule:
-    - cron: '45 * * * *'
+    - cron: '51 * * * *'
 
 jobs:
   month-statistics:
