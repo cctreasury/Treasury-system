@@ -1,27 +1,16 @@
+name: Issue Month Statistics
+
 on:
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  "1 * * * *"
+    - cron: "20 * * * *"
+
 jobs:
-    testing-project:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            - name: Project changes past 7 days
-              uses: adgcz/project-activity@v1.0.0
-              id: project
-              with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
-                  smtp-server: "smtp.gmail.com"
-                  smtp-server-port: "587"
-                  auth-user: ${{ secrets.EMAIL_USER }}
-                  auth-pwd: ${{ secrets.EMAIL_PWD }}
-                  email-from: ${{ secrets.EMAIL_FROM }}
-                  recipient-emails: ${{ secrets.RECIPIENT_EMAILS }}
-                  project-numbers: all
-                  days: 7
-            - name: Upload summary to artifacts
-              uses: actions/upload-artifact@v1
-              with:
-                  name: kanban
-                  path: kanban
+  month-statistics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: month-statistics
+        uses: actions-cool/issues-helper@v2
+        with:
+          actions: 'month-statistics'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          count-lables: 'true'
