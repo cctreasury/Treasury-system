@@ -2,7 +2,7 @@ name: Generate issues report
 
 on:
   schedule:
-    - cron: '59 * * * *'
+    - cron: '30 12 * * *'
 
 env:
   OUTPUT_FILE_NAME: IssuesReport.md
