@@ -15,6 +15,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           count-lables: 'true'
           count-comments: 'true'
-          assignees: 'true'
-          labels: 'true'
+        
           
