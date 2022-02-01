@@ -2,7 +2,8 @@ name: Issue Month Statistics
 
 on:
   schedule:
-    - cron: '50 * * * *'
+    - cron: '30 12 * * *'
+  workflow_dispatch:
 
 jobs:
   month-statistics:
