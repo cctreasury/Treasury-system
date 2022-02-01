@@ -31,7 +31,7 @@ jobs:
               uses: actions/upload-artifact@v1
               with:
                   name: kanban
-                  path: kanban
+                  path: ${{ env.OUTPUT_FILE_NAME }}
             - name: "Commit if any changes were made"
               run: |
                 git remote add github "https://$COMMITTER_USERNAME:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
