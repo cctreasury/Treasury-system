@@ -3,6 +3,7 @@ name: Generate issues report
 on:
   schedule:
     - cron: '30 12 * * *'
+  workflow_dispatch:
 
 env:
   OUTPUT_FILE_NAME: IssuesReport.md
