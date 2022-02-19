@@ -1,8 +1,8 @@
 name: Export issues
 on:
-  issues:
-    types: [opened, edited, reopened, closed, deleted, labeled, unlabeled]
- # workflow_dispatch:
+  #issues:
+  #  types: [opened, edited, reopened, closed, deleted, labeled, unlabeled]
+  workflow_dispatch:
  # schedule:
     # run every 8 hours
   #  - cron:  '0 0,8,16 * * *'
@@ -17,7 +17,7 @@ jobs:
       with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
            # This is assuming that you are triggering off the issue, otherwise you will need to know the issue number
-          issue_id: ${{ github.event.issue.number }}
+          issue_id: 27
           payload: yaml
   test:
    needs: issue
@@ -42,21 +42,17 @@ jobs:
         # CONTENT_ID_VALUE: ${{ fromJSON(steps.issue_body_parser.outputs.payload).id }}
        run: >
          echo "$DATA\n"
-         echo "ID: $CONTENT_ID_VALUE\n"
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    name: Discording
-    steps:
-    - name: Test Custom
-      uses: rjstone/discord-webhook-notify@v1
-      with:
-        severity: info
-        username: CustomUsername
-        color: '#ff00aa'
-        avatarUrl: https://github.githubassets.com/images/modules/logos_page/Octocat.png
-        description: ${{ github.event.issue.title }}
-        details: 'Custom details: Somebody set up us the bomb.'
-        footer: This is a footer.
-        text: ${{ github.event.issue.number }}
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+     - name: Test Custom
+       uses: rjstone/discord-webhook-notify@v1
+       with:
+         severity: info
+         username: CustomUsername
+         color: '#ff00aa'
+         avatarUrl: https://github.githubassets.com/images/modules/logos_page/Octocat.png
+         description: ${{ github.event.issue.title }}
+         details: $DATA
+         footer: This is a footer.
+         text: ${{ github.event.issue.number }}
+         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+
+ 
