@@ -15,7 +15,7 @@ jobs:
         uses: herschel666/microblog-action@beta
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          url: 'https://cc-treasury.github.io/issueblog/'
+          url: 'https://cctreasury.github.io/Treasury-system/'
       - name: Deploy Microblog
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
