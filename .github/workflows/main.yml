@@ -1,8 +1,8 @@
 name: Export issues
 on:
-  #issues:
-  #  types: [opened, edited, reopened, closed, deleted, labeled, unlabeled]
-  workflow_dispatch:
+  issues:
+    types: [opened, edited, reopened, closed, deleted, labeled, unlabeled]
+  #workflow_dispatch:
  # schedule:
     # run every 8 hours
   #  - cron:  '0 0,8,16 * * *'
