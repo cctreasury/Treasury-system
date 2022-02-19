@@ -6,7 +6,7 @@ on:
   #  - cron:  '0 0,8,16 * * *'
 jobs:
   issue:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     name: issueparser
     steps:
     - name: Parse Issue Body
@@ -16,11 +16,35 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
            # This is assuming that you are triggering off the issue, otherwise you will need to know the issue number
           issue_id: ${{ github.event.issue.number }}
-          payload_marker: target_payload
+          payload: yaml
+  test:
+   needs: issue
+   runs-on: ubuntu-latest
+   name: Extract Payload
+   
+   steps:
+     - name: Checkout
+       uses: actions/checkout@v2
+       
+     - name: Parse Issue Body
+       uses: ./
+       id: issue_body_parser
+       with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         issue_id: ${{ github.event.issue.number }}
+         payload: yaml
+     
+     - name: Use Parsed Values
+       env:
+         DATA: ${{ steps.issue_body_parser.outputs.payload }}
+         CONTENT_ID_VALUE: ${{ fromJSON(steps.issue_body_parser.outputs.payload).id }}
+       run: >
+         echo "$DATA\n"
+         echo "ID: $CONTENT_ID_VALUE\n"
   deploy:
-    needs: issue
-    runs-on: windows-latest
-    name: Windows Test Job
+    needs: test
+    runs-on: ubuntu-latest
+    name: Discording
     steps:
     - name: Test Custom
       uses: rjstone/discord-webhook-notify@v1
@@ -32,5 +56,5 @@ jobs:
         description: This is a custom description.
         details: 'Custom details: Somebody set up us the bomb.'
         footer: This is a footer.
-        text: $target_payload
+        text: $DATA
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
