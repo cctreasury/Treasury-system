@@ -9,39 +9,8 @@ on:
 jobs:
   issue:
     runs-on: ubuntu-latest
-    name: issueparser
+    name: discord
     steps:
-    - name: Parse Issue Body
-      uses: peter-murray/issue-body-parser-action@v1
-      id: issue_body_parser
-      with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-           # This is assuming that you are triggering off the issue, otherwise you will need to know the issue number
-          issue_id: 27
-          payload: yaml
-  test:
-   needs: issue
-   runs-on: ubuntu-latest
-   name: Extract Payload
-   
-   steps:
-     - name: Checkout
-       uses: actions/checkout@v2
-       
-     - name: Parse Issue Body
-       uses: ./
-       id: issue_body_parser
-       with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
-         issue_id: ${{ github.event.issue.number }}
-         payload: yaml
-     
-     - name: Use Parsed Values
-       env:
-         DATA: ${{ steps.issue_body_parser.outputs.payload }}
-        # CONTENT_ID_VALUE: ${{ fromJSON(steps.issue_body_parser.outputs.payload).id }}
-       run: >
-         echo "$DATA\n"
      - name: Test Custom
        uses: rjstone/discord-webhook-notify@v1
        with:
@@ -50,7 +19,7 @@ jobs:
          color: '#ff00aa'
          avatarUrl: https://github.githubassets.com/images/modules/logos_page/Octocat.png
          description: ${{ github.event.issue.title }}
-         details: $DATA
+         details: dang
          footer: This is a footer.
          text: ${{ github.event.issue.number }}
          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
