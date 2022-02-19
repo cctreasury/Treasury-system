@@ -56,5 +56,5 @@ jobs:
         description: This is a custom description.
         details: 'Custom details: Somebody set up us the bomb.'
         footer: This is a footer.
-        text: ${{ DATA }}
+        text: '$DATA'
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
