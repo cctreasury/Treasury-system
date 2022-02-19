@@ -1,25 +1,22 @@
-name: Build and Deploy Microblog
-
+name: Export issues
 on:
-  issues:
-    types: [opened, edited, reopened, closed, deleted, labeled, unlabeled]
-
+  schedule:
+    # run every 8 hours
+    - cron:  '0 0,8,16 * * *'
 jobs:
-  build:
+  deploy:
+    name: Export issues to S3
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Build Microblog
-        uses: herschel666/microblog-action@beta
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          url: 'https://cctreasury.github.io/Treasury-system/'
-      - name: Deploy Microblog
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: _site
-          CLEAN: true
+    - name: Export issues
+      uses: niteoweb/export-issues-action@v2
+      with:
+        repo: ${{ github.repository }}
+        org: ${{ github.repository_owner }}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        out: issues
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: issues
+        path: "issues/*.md"
