@@ -1,0 +1,45 @@
+name: CC rewards
+description: Form to document CC reward distribution
+title: "Ada reward for duties performed"
+labels: ["CC rewards"]
+assignees:
+  - Glaxas
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Enter amount of CC members to reward and ad extra comments if necessary.
+  - type: checkboxes
+    attributes:
+      label: Members to be rewarded.
+      description: Please select all members that are allegeable for rewards
+      options:
+      - label: Nori Nishigaya
+      - label: Nadim Karam
+      - label: JP (Jonathan Postnikoff)
+      - label: Peter Wolcott
+        required: false
+  - type: input
+    id: members
+    attributes: 
+      label: Number of CC members
+      description: Please enter the amount of CC Admin members to reward.
+      placeholder: ex. 4
+    validations:
+      required: true
+  - type: textarea
+    id: Comment 
+    attributes: 
+      label: Extra Comment 
+      description: Extra comments about rewards.
+      placeholder: ex. Only allocate X amount of rewards for distribution among members...
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes: 
+      label: Agree the information is correct
+      description: By submitting this issue, you agree the information provided is correct.
+      options:
+        - label: I agree the information provided is correct.
+          required: true
