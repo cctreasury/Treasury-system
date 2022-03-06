@@ -20,6 +20,7 @@ body:
         - CCv3 Sustaining the Circle
         - CC Funding Mechanism
         - CC Treasury Management
+        - CC Mentorship
     validations:
       required: true
   - type: input
@@ -59,6 +60,7 @@ body:
         - CC Treasurer remuneration
         - CC Treasury system
         - CC Treasury system documentation
+        - CC Mentorship
         - Project funding - Community Advisors
         - Project funding - Funded Proposers
         - Project funding - General ADA Holder
