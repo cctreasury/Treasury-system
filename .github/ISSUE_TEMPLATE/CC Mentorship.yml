@@ -3,7 +3,7 @@ description: Form to document CC reward distribution
 title: "Ada reward for duties performed"
 labels: ["CC rewards"]
 assignees:
-  - Glaxas
+  - Andre-Diamond
 body:
   - type: markdown
     attributes:
