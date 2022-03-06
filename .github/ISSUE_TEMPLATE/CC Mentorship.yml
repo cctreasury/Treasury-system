@@ -1,4 +1,4 @@
-name: CC Admin rewards 2
+name: CC Mentorship
 description: Form to document CC reward distribution
 title: "Ada reward for duties performed"
 labels: ["CC rewards"]
@@ -24,7 +24,7 @@ body:
     id: members
     attributes: 
       label: Number of CC members
-      description: Please enter the amount of CC Admin members to reward.
+      description: Please enter the amount of CC members to reward.
       placeholder: ex. 4
     validations:
       required: true
