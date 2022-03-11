@@ -62,11 +62,11 @@ body:
         - CC Treasury system documentation
         - CCv1 Mentorship
         - CCv2 Mentorship
-        - Project funding - Community Advisors
-        - Project funding - Funded Proposers
-        - Project funding - General ADA Holder
-        - Project funding - Stake Pool Operators
-        - Project funding - Toolmakers & Maintainers
+        - Funding Mechanism - Community Advisors
+        - Funding Mechanism - Funded Proposers
+        - Funding Mechanism - General ADA Holder
+        - Funding Mechanism - Stake Pool Operators
+        - Funding Mechanism - Toolmakers & Maintainers
         - Other
     validations:
       required: true
