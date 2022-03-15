@@ -15,7 +15,6 @@ body:
       label: Pool
       description: Please select the funded proposal that will pay for this
       options:
-        - Power Up Catalyst Circle
         - CC Admin Team Scope Expansion
         - CCv3 Sustaining the Circle
         - CC Funding Mechanism
