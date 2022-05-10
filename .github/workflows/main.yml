@@ -11,12 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     name: discord
     steps:
-     #- name: Print something
-      # uses: actions/github-script@v5.1.0
-       #with:
-        # script: |
-         # const { owner, repo } = context.repo
-          #console.log(`The owner of ${repo} is ${owner}`)
      - name: Test Custom
        uses: rjstone/discord-webhook-notify@v1
        with:
