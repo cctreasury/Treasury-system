@@ -1,7 +1,7 @@
 name: Export issues
 on:
   issues:
-    types: [opened, edited, reopened, closed, deleted, labeled, unlabeled]
+    types: [closed]
   workflow_dispatch:
  # schedule:
     # run every 8 hours
