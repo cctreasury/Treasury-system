@@ -20,7 +20,7 @@ jobs:
          avatarUrl: https://github.githubassets.com/images/modules/logos_page/Octocat.png
          description: "Treasury Guild made a payment"
          details: ${{ github.event.issue.body }} https://treasury-guild.gitbook.io/catalyst-circle-treasury/
-         footer: "View transactions in Gitbook and GitHub links"
+         footer: "View transaction in Gitbook link"
          text: ${{ github.event.issue.title }}
          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
 
