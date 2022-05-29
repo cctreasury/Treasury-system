@@ -3,6 +3,9 @@ contact_links:
   - name: Transaction Form 1
     url: https://cctreasury.github.io/Transaction-form/
     about: Fill in this form before you make the transaction (Complete form 1 and 2)
+  - name: Transaction Form 2
+    url: https://github.com/cctreasury/Treasury-system/issues/new
+    about: Fill in this form after you made the transaction (Complete form 1 and 2)
   - name: Transaction Form (Fund 8)
     url: https://treasuryguild.github.io/treasury-v3/
     about: Use this form for CC Funding Mechanism
