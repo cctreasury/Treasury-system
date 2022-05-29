@@ -3,6 +3,9 @@ contact_links:
   - name: Transaction Form 1
     url: https://cctreasury.github.io/Transaction-form/
     about: Fill in this form before you make the transaction (Complete form 1 and 2)
+  - name: Transaction Form (Fund 8)
+    url: https://treasuryguild.github.io/treasury-v3/
+    about: Use this form for CC Funding Mechanism
   - name: Tasks/Misc/Expenses
     url: https://docs.google.com/forms/d/e/1FAIpQLSf3HQgwo0q05gmsnBZydDMlGnLW0V7reetmQTJR2Tx5gljQfQ/viewform?usp=sf_link
     about: Google form for tasks/misc/expense ADA requests to be completed by Circle member
