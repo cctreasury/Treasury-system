@@ -1,6 +1,6 @@
 # CC-Treasury
 
-- [Transaction Forms](https://github.com/cctreasury/Treasury-system/issues/new/choose)
+- [Treasury System v3](https://treasuryguild.github.io/treasury-v3/)
 
 Fund 7 funded proposals (Ideascale links)
 
